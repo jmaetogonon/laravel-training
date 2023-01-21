@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/test-page', function () {
     return view('label');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\UserController::class, 'index'])->name('home');
